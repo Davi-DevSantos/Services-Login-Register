@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-    <script src="js.js"></script>
+    <script src="js.js" defer></script>
     <div class="container">
         <div class="form-group">
             <div class="login">
@@ -18,7 +18,7 @@
                 <label for="password">Password</label>
                 <input class="form-control" type="password" name="password" id="password">
                 <input type="button" value="Login" class="btn" id="login">
-                <a id="register-link" href="#">Do you have an account?</a>
+                <a id="register-link" href="#">Do you not have an account?</a>
             </div>
             <div class="register">
                 <h2>Register</h2>
@@ -29,6 +29,7 @@
                 <label for="confirm_password">Confirm Password</label>
                 <input class="form-control" type="password" name="confirm_password" id="confirm_password">
                 <input type="button" value="Register" class="btn" id="register">
+                <a id="login-link" href="#">Do you have an account?</a>
             </div>
             <div class="cover-panel">
                 <h2>Welcome</h2>

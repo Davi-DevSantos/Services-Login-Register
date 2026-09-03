@@ -9,7 +9,7 @@ class Settings(BaseSettings):
     version: str = "0.1.0"
     environment: str = "development"
     debug: bool = True
-    database_url: str = "sqlite:///./app.db"
+    database_url: str = "sqlite:///./src.db"
     secret_key: str = "change-me"
     algorithm: str = "HS256"
     cors_origins: list[AnyHttpUrl] = []
