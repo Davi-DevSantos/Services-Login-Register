@@ -3,10 +3,14 @@ from collections.abc import Generator
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session, sessionmaker
 
-from src.core.config import Settings
+from src.core.config import get_settings
 
-settings = Settings()
-engine = create_engine(settings.database_url, echo=True)
+settings = get_settings()
+engine = create_engine(
+    settings.database_url,
+    echo=settings.debug,
+    connect_args={"check_same_thread": False} if settings.database_url.startswith("sqlite") else {},
+)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 def get_db() -> Generator[Session, None, None]:

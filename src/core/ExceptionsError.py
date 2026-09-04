@@ -1,20 +1,10 @@
-class AppError(Exception):
-    pass
-
-class UserNotFoundError(AppError):
-    pass
-
-class InvalidCredentialsError(AppError):
-    pass
-
-class UnauthorizedError(AppError):
-    pass
-
-class InvalidTokenError(AppError):
-    pass
-
-class ServiceUnavailableError(AppError):
-    pass
-
-class TokenExpiredError(AppError):
-    pass
+from src.core.exceptions import (  # noqa: F401 — compatibilidade
+    AppError,
+    InvalidCredentialsError,
+    InvalidTokenError,
+    ServiceUnavailableError,
+    TokenExpiredError,
+    UnauthorizedError,
+    UserAlreadyExistsError,
+    UserNotFoundError,
+)
