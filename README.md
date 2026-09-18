@@ -247,4 +247,4 @@ alembic upgrade head
 
 ## Licença
 
-Uso interno / freelance — ajuste conforme contrato.
+Uso interno - não comercializar
